@@ -1,0 +1,10 @@
+.section-header {
+  text-align: center;
+}
+.section-header__title {
+  margin: 0 0 em(17, 40);
+  color: secondary-font-color;
+}
+.section-header__subtitle {
+  margin: 0;
+}

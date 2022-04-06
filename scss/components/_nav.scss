@@ -1,0 +1,132 @@
+.nav {
+  background: #181818;
+
+  &__burger {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      position: relative;
+      width: em(30);
+      height: em(18);
+      cursor: pointer;
+      z-index: 3;
+    }
+  }
+
+  &__burger::before,
+  &__burger::after,
+  &__burger-line {
+    position: absolute;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    transition: all .3s ease 0s;
+    background-color: $secondary-font-color;
+  }
+
+  &__burger::before, &__burger::after { content: "" }
+
+  &__burger::before {
+    top: 0;
+  }
+  &__burger::after {
+    bottom: 0;
+  }
+
+  &__burger-line {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__list {
+    transition: left .3s ease;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+      //display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(0, 0, 0, .9);
+      padding: em(25);
+    }
+  }
+
+  &__list--open {
+    left: 0;
+  }
+
+  &__item {
+    margin-right: 32px;
+
+    @media screen and (max-width: 960px) {
+      margin-right: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: em(10);
+    }
+  }
+
+  &__item--aside {
+    margin-right: 56px;
+
+    @media screen and (max-width: 960px) {
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: em(20);
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: (20 / 15);
+    @media screen and (max-width: 767px) {
+      display: inline-block;
+      width: 100%;
+    }
+
+    &--small {
+      font-size: 13px;
+      line-height: (20 / 13);
+    }
+
+    &--bg {
+      font-size: 16px;
+      line-height: (20 / 16);
+      letter-spacing: 0.4px;
+      padding: 11px 20px;
+      color: #000;
+      background: #fff;
+      border-radius: 14px;
+      display: inline-block;
+
+      @media screen and (max-width: 960px) {
+        padding: 6px 12px;
+      }
+    }
+  }
+}

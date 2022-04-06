@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  color: #fff;
+  flex-wrap: wrap;
+
+  &__item {
+    line-height: 1;
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: em(16);
+  }
+
+  &__icon {
+    margin-right: em(6);
+  }
+
+  &__text {
+    font-size: em(12);
+    display: inline-block;
+  }
+}

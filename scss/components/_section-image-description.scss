@@ -1,0 +1,11 @@
+.section-image-description {
+  max-width: em(241);
+
+  &__title {
+    color: $secondary-font-color;
+    letter-spacing: em(2);
+    text-transform: uppercase;
+  }
+
+  &__text {}
+}

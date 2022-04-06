@@ -1,0 +1,20 @@
+@mixin poppins() {
+  font-family: $poppins;
+}
+
+.title-1 {
+  @include poppins();
+  font-size: em(54);
+  line-height: em(60, 54);
+}
+
+.title-2 {
+  @include poppins();
+  font-size: em(40);
+  line-height: em(42, 40);
+}
+
+.subtitle-2 {
+  font-size: em(23);
+  line-height: em(30, 23);
+}

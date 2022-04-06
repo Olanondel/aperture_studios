@@ -1,0 +1,17 @@
+.section-header {
+  text-align: center;
+  max-width: em(571);
+  margin: 0 auto;
+
+  &__title {
+    margin: 0 0 em(17, 40);
+    color: $secondary-font-color;
+  }
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__link {
+    margin-top: em(22);
+  }
+}
